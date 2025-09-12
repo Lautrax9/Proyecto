@@ -179,8 +179,7 @@ public class Materia extends javax.swing.JFrame {
             return;
         }
 
-        // Si querés guardar desde aquí, deberías pasar nombre/tipoLicencia/tiempo desde Licencia
-        // bitacora.agregarRegistro(nombre, tipoLicencia, tiempo, gruposTxt, materiaTxt);
+       
 
         JOptionPane.showMessageDialog(this,
             "Datos de materia y turno registrados.",
