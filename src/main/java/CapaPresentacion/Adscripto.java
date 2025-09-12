@@ -19,6 +19,7 @@ public class Adscripto extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         volver = new javax.swing.JButton();
+        eliminar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tabla = new javax.swing.JTable();
 
@@ -36,6 +37,10 @@ public class Adscripto extends javax.swing.JFrame {
         jPanel1.add(volver);
         volver.setBounds(10, 490, 76, 31);
 
+        eliminar.setText("Eliminar");
+        jPanel1.add(eliminar);
+        eliminar.setBounds(480, 490, 77, 27);
+
         tabla.setAutoCreateRowSorter(true);
         tabla.setBackground(new java.awt.Color(204, 204, 204));
         tabla.setModel(new javax.swing.table.DefaultTableModel(
@@ -48,8 +53,23 @@ public class Adscripto extends javax.swing.JFrame {
             new String [] {
                 "Nombre Completo", "Materia", "Fechas", "Tipo de Licencia", "Turno"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, true, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         jScrollPane1.setViewportView(tabla);
+        if (tabla.getColumnModel().getColumnCount() > 0) {
+            tabla.getColumnModel().getColumn(0).setResizable(false);
+            tabla.getColumnModel().getColumn(1).setResizable(false);
+            tabla.getColumnModel().getColumn(2).setResizable(false);
+            tabla.getColumnModel().getColumn(3).setResizable(false);
+            tabla.getColumnModel().getColumn(4).setResizable(false);
+        }
 
         jPanel1.add(jScrollPane1);
         jScrollPane1.setBounds(20, 10, 540, 500);
@@ -100,6 +120,7 @@ Eleccion E = new Eleccion();
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton eliminar;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable tabla;
