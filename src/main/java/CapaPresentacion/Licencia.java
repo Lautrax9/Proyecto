@@ -165,7 +165,7 @@ public class Licencia extends javax.swing.JFrame {
               Materia M = new Materia(bitacora);
     M.setVisible(true);
     dispose();
-        
+        //queso
         bitacora.agregarRegistro(nombreTxt, tipoLicencia, tiempoTxt);
 
         JOptionPane.showMessageDialog(this,
