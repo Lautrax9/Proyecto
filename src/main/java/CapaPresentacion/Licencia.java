@@ -143,15 +143,15 @@ public class Licencia extends javax.swing.JFrame {
 
     private void listoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_listoActionPerformed
         
-         Materia M = new Materia(bitacora);
-    M.setVisible(true);
-    dispose();
+        
         
         
          String nombreTxt     = nombre.getText().trim();
         String tipoLicencia  = licencia.getText().trim(); // JTextField, no JComboBox
         String tiempoTxt     = tiempo.getText().trim();
           // Asegurate de declarar y agregarlo
+          
+     
 
         if (nombreTxt.isEmpty() || tipoLicencia.isEmpty() ||
             tiempoTxt.isEmpty()) {
@@ -161,7 +161,11 @@ public class Licencia extends javax.swing.JFrame {
                 JOptionPane.WARNING_MESSAGE);
             return;
         }
-
+        
+              Materia M = new Materia(bitacora);
+    M.setVisible(true);
+    dispose();
+        
         bitacora.agregarRegistro(nombreTxt, tipoLicencia, tiempoTxt);
 
         JOptionPane.showMessageDialog(this,
