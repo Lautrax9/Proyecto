@@ -1,39 +1,86 @@
 package CapaLogica;
+
+import javax.swing.JTextField;
+
 public class BitacoraCero {
     
     
     
     
-    private String nombreCompleto;
+    private String nombre;
     private String materia;
     private String fecha;
-    private String tipoLicencia;
+    private String licencia;
     private String grupo;
     private String cedula;
+    
 
-    // <-- así SÍ compila
-public void agregarRegistro(String nombre,
-                            String tipo,
-                            String tiempo,
-                            String grupos,
-                            String cedula) {
-    // tu lógica para almacenar el registro
-}
- {
-        this.nombreCompleto = nombreCompleto;
+//    // <-- así SÍ compila
+//public void agregarRegistro(JTextField nombre, JTextField tipo, JTextField tiempo, JTextField grupos, JTextField cedula, JTextField licencia, JTextField grupos1) {
+//    // tu lógica para almacenar el registro
+//}
+// {
+//        this.nombre = nombre;
+//        this.materia = materia;
+//        this.fecha = fecha;
+//        this.licencia = licencia;
+//        this.grupo = grupo;
+//       this.cedula = cedula;
+//    }
+//
+//   public String[] coArray(){
+//       return new String[] {nombre, materia, fecha, licencia, grupo, cedula };
+//       
+//   }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getMateria() {
+        return materia;
+    }
+
+    public void setMateria(String materia) {
         this.materia = materia;
+    }
+
+    public String getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(String fecha) {
         this.fecha = fecha;
-        this.tipoLicencia = tipoLicencia;
+    }
+
+    public String getLicencia() {
+        return licencia;
+    }
+
+    public void setLicencia(String licencia) {
+        this.licencia = licencia;
+    }
+
+    public String getGrupo() {
+        return grupo;
+    }
+
+    public void setGrupo(String grupo) {
         this.grupo = grupo;
-       this.cedula = cedula;
     }
 
-    // Getters opcionales si querés mostrar los datos en una tabla
-    public String[] toArray() {
-        return new String[] { nombreCompleto, materia, fecha, tipoLicencia, grupo, cedula };
+    public String getCedula() {
+        return cedula;
     }
 
-    public void agregarRegistro(String nombreTxt, String tipoLicencia, String tiempoTxt) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public void setCedula(String cedula) {
+        this.cedula = cedula;
     }
-}
+   }
+
+
+

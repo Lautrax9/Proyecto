@@ -4,9 +4,9 @@ import CapaLogica.BitacoraCero;
 
 public class Eleccion extends javax.swing.JFrame {
     
-    private BitacoraCero bitacora = new BitacoraCero();
-    
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(Eleccion.class.getName());
+//    private BitacoraCero bitacora = new BitacoraCero();
+//    
+//    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(Eleccion.class.getName());
 
     
     
@@ -78,7 +78,7 @@ public class Eleccion extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void docenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_docenteActionPerformed
-Licencia L = new Licencia(bitacora);
+Licencia L = new Licencia();
     L.setVisible(true);
     dispose();
     }//GEN-LAST:event_docenteActionPerformed
@@ -98,16 +98,7 @@ Licencia L = new Licencia(bitacora);
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ReflectiveOperationException | javax.swing.UnsupportedLookAndFeelException ex) {
-            logger.log(java.util.logging.Level.SEVERE, null, ex);
-        }
+      
         //</editor-fold>
 
         /* Create and display the form */
