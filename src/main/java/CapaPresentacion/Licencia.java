@@ -22,14 +22,7 @@ public class Licencia extends javax.swing.JFrame {
         
     }
 
-//    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(Licencia.class.getName());
-//
-//    
-//    private Licencia() {
-//    }
-//
-//    
-//    
+  
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
@@ -83,7 +76,7 @@ public class Licencia extends javax.swing.JFrame {
             }
         });
         jPanel1.add(volver);
-        volver.setBounds(10, 10, 76, 30);
+        volver.setBounds(10, 10, 100, 40);
 
         listo.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         listo.setText("Guardar");
@@ -178,9 +171,24 @@ public class Licencia extends javax.swing.JFrame {
            
         
         
-        //private javax.swing.JTextField nombre;
+   
     
-        
+        BitacoraCero registro = new BitacoraCero();
+registro.setNombre(nombre.getText().trim());
+registro.setMateria(materia.getText().trim());
+registro.setFecha(tiempo.getText().trim());
+registro.setLicencia(licencia.getText().trim());
+registro.setGrupo(grupos.getText().trim());
+registro.setCedula(cedula.getText().trim());
+registro.setTurno(turno.getText().trim());
+try {
+    CapaLogica.FachadaLogica fachada = new CapaLogica.FachadaLogica();
+    fachada.guardarRegistro(registro);
+    JOptionPane.showMessageDialog(this, "Registro guardado correctamente.");
+} catch (Exception ex) {
+    JOptionPane.showMessageDialog(this, "Error al guardar: " + ex.getMessage());
+}
+
           
      
 
@@ -197,8 +205,7 @@ public class Licencia extends javax.swing.JFrame {
        
         
               
-        //queso
-//        bitacora.agregarRegistro();
+
       
         JOptionPane.showMessageDialog(this,
             "Registro guardado correctamente.",
@@ -221,9 +228,8 @@ public class Licencia extends javax.swing.JFrame {
         
     }//GEN-LAST:event_listoActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
+    
+     
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -235,6 +241,8 @@ public class Licencia extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> new Licencia().setVisible(true));
+        
+        
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

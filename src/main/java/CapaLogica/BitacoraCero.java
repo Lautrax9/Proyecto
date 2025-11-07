@@ -13,25 +13,8 @@ public class BitacoraCero {
     private String licencia;
     private String grupo;
     private String cedula;
+    private String turno;
     
-
-//    // <-- así SÍ compila
-//public void agregarRegistro(JTextField nombre, JTextField tipo, JTextField tiempo, JTextField grupos, JTextField cedula, JTextField licencia, JTextField grupos1) {
-//    // tu lógica para almacenar el registro
-//}
-// {
-//        this.nombre = nombre;
-//        this.materia = materia;
-//        this.fecha = fecha;
-//        this.licencia = licencia;
-//        this.grupo = grupo;
-//       this.cedula = cedula;
-//    }
-//
-//   public String[] coArray(){
-//       return new String[] {nombre, materia, fecha, licencia, grupo, cedula };
-//       
-//   }
 
     public String getNombre() {
         return nombre;
@@ -80,6 +63,17 @@ public class BitacoraCero {
     public void setCedula(String cedula) {
         this.cedula = cedula;
     }
+    
+    public void setTurno(String turno) {
+    this.turno = turno;
+}
+
+    public String getTurno() {
+    return turno;
+}
+
+
+    
    }
 
 
